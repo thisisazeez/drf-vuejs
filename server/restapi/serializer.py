@@ -4,5 +4,5 @@ from .models import Blogger
 
 class BloggerSerializer(serializers.HyperlinkedModelSerializer):
     class Meta:
-        model = Blogger
+        model = Blogger 
         fields = ['url', 'title', 'body']
