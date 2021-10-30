@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     
     #third party
     'rest_framework',
+    "corsheaders",
     
     #local
     'restapi',
@@ -53,7 +54,14 @@ REST_FRAMEWORK = {
     ]
 }
 
+CORS_ORIGIN_ALLOW_ALL = True
+
 MIDDLEWARE = [
+    #third party
+    "corsheaders.middleware.CorsMiddleware",
+    "django.middleware.common.CommonMiddleware",
+    
+    #local
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
